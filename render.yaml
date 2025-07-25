@@ -1,3 +1,9 @@
-build:
-  environment:
-    python_version: 3.12.3
+services:
+  - type: web
+    name: telegram-bot
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
+    build:
+      environment:
+        python_version: 3.12.3
